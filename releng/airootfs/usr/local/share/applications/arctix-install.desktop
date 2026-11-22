@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Name=Install Arctix
+Comment=Install Arctix on this computer
+Exec=qs -p /home/arctix/.config/quickshell/ii/installer.qml
+TryExec=/usr/local/bin/arctix-install
+Icon=system-software-install
+Terminal=false
+Categories=System;
+Actions=terminal;
+
+[Desktop Action terminal]
+Name=Install Arctix in a terminal
+Exec=kitty --class arctix-install --title "Install Arctix" -e systemd-inhibit --what=idle:sleep --who="Arctix installer" --why="Installing Arctix" sudo /usr/local/bin/arctix-install guided

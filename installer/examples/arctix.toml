@@ -1,0 +1,24 @@
+# Sample config for arctix-install.
+# Try it: arctix-install plan examples/arctix.toml
+
+[disk]
+device = "/dev/vda"          # always explicit, never guessed
+filesystem = "ext4"          # btrfs comes later
+luks = false                 # comes later
+
+[install]
+mode = "copy"                # or "pacstrap"
+package_set = "desktop"      # pacstrap mode only
+update = true                # run pacman -Syu if the network is up
+
+[system]
+hostname = "arctix"
+timezone = "Europe/Copenhagen"
+locale = "en_US.UTF-8"
+keymap = "us"
+
+[user]
+name = "cammy"
+shell = "/usr/bin/fish"
+sudo = true
+# the password never goes in here, the installer asks for it

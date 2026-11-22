@@ -1,0 +1,15 @@
+Test:
+qemu-system-x86_64 -enable-kvm -m 12G -smp 8 -cpu host \
+  -device virtio-vga-gl -display gtk,gl=on -monitor stdio \
+  -nic user,hostfwd=tcp::2222-:22 \
+  -bios /usr/share/edk2/x64/OVMF.4m.fd \
+  -cdrom ~/Documents/GitHub/arctix/out/arctix-0.0.4-x86_64.iso -boot d
+
+Build:
+sudo mkarchiso -v -w ~/arctix-work -o ../out .
+
+Remove Old:
+sudo rm -rf ~/arctix-work
+
+Extract Backup:
+tar --zstd -xpf arctix.tar.zst

@@ -1,0 +1,16 @@
+# Built ISOs and mkarchiso output
+*.iso
+/out/
+
+# Rust build output
+/installer/target/
+releng/Arctix-Installer-Plan.md
+
+# Installer binary: build-iso.sh compiles it and copies it in before mkarchiso
+/releng/airootfs/usr/local/bin/arctix-install
+
+# Backups and editor leftovers
+*.tar.zst
+*.old
+*.bak
+*~

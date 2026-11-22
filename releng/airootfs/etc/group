@@ -1,0 +1,6 @@
+arctix:x:1000:
+wheel:x:998:arctix
+video:x:985:arctix
+input:x:976:arctix
+audio:x:995:arctix
+render:x:974:arctix
